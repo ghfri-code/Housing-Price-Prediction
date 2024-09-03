@@ -1,4 +1,4 @@
-# Housing-Price-Prediction
+# Housing Price Prediction
 
 ![logo](images/hpp.webp)
 
@@ -39,23 +39,18 @@ The project will take the following steps:
 | sqft_lot15 | The square footage of the land lots of the nearest 15 neighbors |
 
 ## Data Analysis
-
-The exploratory phase will also focus on the questions such as:    
-What location in the county has the highest property value?      
-Which neighborhoods contain the most valuable real estate?
-What aspects of the property bring value?
+The exploratory phase will also focus on the questions such as:                                                                                
+What location in the county has the highest property value?                                                                                    
+What aspects of the property bring value?                                                                                                      
+Does the number of bathrooms affect property value?                                                                                            
 Do renovations affect property values?
 
 
 ![logo](images/fig1.png)
-
 Analyzing the average property values per zip code shows the neighborhood with the highest average property values. Most properties in these neighborhoods double the average property value of King County with the average property.
 Furthermore, Medina has the highest price the average property value in Medina is about quadrupling that of King County average.
 
-
-
 ![logo](images/fig3.png)
-
 The distribution is positively skewed. Most homes are priced around $500,000; few are priced over 2 million.
 
 ![logo](images/fig6.png)
@@ -64,7 +59,6 @@ The distribution is positively skewed. Most homes are priced around $500,000; fe
 ![logo](images/fig12.png)
 ![logo](images/fig13.png)
 
-Sqft_living has the highest positive correlation with price.
 Price has a high positive correlation with bathrooms, grade, sqft_above, and sqft_living15.
 Price has a low positive correlation with bedrooms, floors, waterfront, view, sqft_basement, and latitude.
 Price has no clear relationship with sqft_lot, condition, house_age, yr_renovated, zipcode, longitude, and sqft_lot15.
@@ -74,7 +68,7 @@ Use the Scikit-learn package and apply these 4 models:
 1. Linear Regression 
 2. RandomForestRegressor 
 3. SGDRegressor 
-4. Ridge Regression
+4. Ridge Regression                                                                                                                            
 **Recursive Feature Elimination** is utilized to eliminate unnecessary features in iteration.
 Hypothetically, this model should offer a more accurate model. However, the results show otherwise below, and only SGDRegressor caused increasing the accuracy.
 It was determined that the RandomForestRegressor without Recursive Feature Eliminiation model performed the best and the SGDRegressor performed the worst without Recursive Feature Eliminiation.
